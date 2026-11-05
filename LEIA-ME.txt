@@ -1,0 +1,41 @@
+RABISCO! — JOGO ONLINE DE DESENHO E ADIVINHAÇÃO
+
+REQUISITOS
+- Node.js 18 ou superior.
+- Não precisa instalar bibliotecas extras.
+
+COMO RODAR NO WINDOWS
+1. Extraia o ZIP.
+2. Abra a pasta rabisco-online.
+3. Dê dois cliques em INICIAR_RABISCO.bat.
+4. Abra http://localhost:3000 no navegador.
+
+COMO RODAR PELO TERMINAL
+1. Abra um terminal dentro da pasta do projeto.
+2. Execute: npm start
+3. Abra http://localhost:3000 no navegador.
+
+COMO JOGAR NA MESMA REDE WI-FI
+1. Inicie o servidor no computador anfitrião.
+2. No Prompt de Comando, execute ipconfig e encontre o Endereço IPv4.
+3. Os outros jogadores abrem http://IP-DO-COMPUTADOR:3000
+4. O anfitrião cria uma sala e compartilha o código de 6 caracteres.
+
+COMO PUBLICAR NA INTERNET
+O projeto precisa de uma hospedagem que execute Node.js e aceite conexões WebSocket.
+Hospedagem exclusivamente estática (upload de um HTML ou ZIP) não executa o servidor e não mantém o multiplayer.
+Configure a plataforma para iniciar com `npm start`. O servidor usa a variável PORT fornecida pela hospedagem.
+
+REGRAS
+- 2 a 8 jogadores por sala.
+- 1 a 5 rodadas por jogador, definidas pelo anfitrião.
+- 15 segundos para escolher uma palavra.
+- 80 segundos para desenhar e adivinhar.
+- Quem acerta ganha pontos; quem desenha também recebe pontos por cada acerto.
+- As salas ficam na memória do servidor e são apagadas quando o processo reinicia.
+
+ARQUIVOS
+- index.html: interface do jogo.
+- server.js: servidor HTTP e multiplayer WebSocket.
+- package.json: comando para iniciar o servidor.
+- INICIAR_RABISCO.bat: inicializador para Windows.

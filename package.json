@@ -1,0 +1,9 @@
+{
+  "name": "rabisco-online",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Jogo multiplayer de desenho e adivinhacao em tempo real",
+  "main": "server.js",
+  "scripts": { "start": "node server.js" },
+  "engines": { "node": ">=18" }
+}
